@@ -6,7 +6,7 @@ you will be able to search for the tweets by a given search handle.
 Goals:
 ------
 - [x] Setup a public GitHub repository to host the code
-- [ ] Create a Rails 5.0+ application
+- [x] Create a Rails 5.0+ application
 - [ ] Create an authentication layer to protect access from the general public
 - [ ] Consume the Twitter API to display the time & content of the last 25 tweets for any given Twitter handle
 - [ ] Deploy the application to Heroku (free app)
