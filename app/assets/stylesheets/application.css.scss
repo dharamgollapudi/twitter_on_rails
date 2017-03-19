@@ -28,3 +28,19 @@ body { padding-top: 60px; }
 
 // And finally bootswatch style itself
 @import "bootswatch/cerulean/bootswatch";
+
+.navbar-brand {
+  font-size: inherit;
+}
+
+.authform {
+  padding-top: 30px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.authform form {
+  @extend .well;
+  @extend .well-lg;
+  padding-bottom: 20px;
+}

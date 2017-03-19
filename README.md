@@ -7,7 +7,7 @@ Goals:
 ------
 - [x] Setup a public GitHub repository to host the code
 - [x] Create a Rails 5.0+ application
-- [ ] Create an authentication layer to protect access from the general public
+- [x] Create an authentication layer to protect access from the general public
 - [ ] Consume the Twitter API to display the time & content of the last 25 tweets for any given Twitter handle
 - [ ] Deploy the application to Heroku (free app)
 

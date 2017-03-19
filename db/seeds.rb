@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+if User.count < 10
+  10.times do |i|
+    email = (i == 0) ? "tester@gmail.com" : "tester#{i}@gmail.com"
+    user = User.find_by_email(email)
+    unless user.present?
+      user = User.new
+      user.email = email
+      user.password =  'tester'
+      user.password_confirmation = 'tester'
+      user.save
+    end
+  end
+end
