@@ -25,7 +25,7 @@ Create a Readme file within the repository that contains the following:
 - [x] Brief walk-through of app design / choices made
 - [x] Local environment setup instructions
 - [ ] Test suite setup/execution instructions (if applicable)
-- [ ] Email links of the public GitHub repo and live Heroku application to dev-challenge@stackcommerce.com
+- [x] Email links of the public GitHub repo and live Heroku application to dev-challenge@stackcommerce.com
 
 Design Choices:
 ---------------
