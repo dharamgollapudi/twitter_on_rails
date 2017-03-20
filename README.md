@@ -16,7 +16,7 @@ Stretch Goals:
 --------------
 - [ ] Write specs/tests!
 - [x] Cache identical API calls for ~5 mins
-- [ ] Parse @mentions in tweets and link those to the status pages
+- [x] Parse @mentions in tweets and link those to the status pages
 - [ ] Anything else cool that you can think of
 
 Submission Guidelines:

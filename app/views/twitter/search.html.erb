@@ -27,7 +27,7 @@
           <tbody>
           <% @tweets.each do |tweet| %>
             <tr>
-              <td><%= tweet.text %></td>
+              <td><%= auto_link(tweet.text).html_safe %></td>
               <td><%= tweet.created_at %></td>
             </tr>
           <% end %>
