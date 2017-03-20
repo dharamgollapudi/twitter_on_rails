@@ -10,7 +10,7 @@ Goals:
 - [x] Create an authentication layer to protect access from the general public
 - [x] Setup twitter application and add the consumer key info to .env file
 - [x] Consume the Twitter API to display the time & content of the last 25 tweets for any given Twitter handle
-- [ ] Deploy the application to Heroku (free app)
+- [x] Deploy the application to Heroku (free app)
 
 Stretch Goals:
 --------------
@@ -26,3 +26,20 @@ Create a Readme file within the repository that contains the following:
 - [ ] Local environment setup instructions
 - [ ] Test suite setup/execution instructions (if applicable)
 - [ ] Email links of the public GitHub repo and live Heroku application to dev-challenge@stackcommerce.com
+
+Links:
+------
+Github Repo: https://github.com/dharamgollapudi/twitter_on_rails
+Heroku App: https://twitter-on-rails-201703.herokuapp.com/
+
+With the following Seed Users:
+- tester@gmail.com/tester
+- tester1@gmail.com/tester
+- tester2@gmail.com/tester
+- tester3@gmail.com/tester
+- tester4@gmail.com/tester
+- tester5@gmail.com/tester
+- tester6@gmail.com/tester
+- tester7@gmail.com/tester
+- tester8@gmail.com/tester
+- tester9@gmail.com/tester
