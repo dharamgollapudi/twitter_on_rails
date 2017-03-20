@@ -4,7 +4,9 @@ class TwitterClient
 
   class << self
     def search_tweets_by_handle(handle)
-      native_client.user_timeline(handle)
+      Rails.cache.fetch("tweets_for_#{handle}", expires_in: 5.minutes) do
+        native_client.user_timeline(handle)
+      end
     end
 
     def native_client
