@@ -14,7 +14,7 @@ Goals:
 
 Stretch Goals:
 --------------
-- [ ] Write specs/tests!
+- [x] Write specs/tests!
 - [x] Cache identical API calls for ~5 mins
 - [x] Parse @mentions in tweets and link those to the status pages
 - [ ] Anything else cool that you can think of
@@ -24,13 +24,14 @@ Submission Guidelines:
 Create a Readme file within the repository that contains the following:
 - [x] Brief walk-through of app design / choices made
 - [x] Local environment setup instructions
-- [ ] Test suite setup/execution instructions (if applicable)
+- [x] Test suite setup/execution instructions (if applicable)
 - [x] Email links of the public GitHub repo and live Heroku application to dev-challenge@stackcommerce.com
 
 Design Choices:
 ---------------
 - App Framework: `rails` was chosen as it is quick to setup up an MVP as well as familiarity
-- CSS Framework: 'bootstrap' was chosen due to its adaptation as well as familiarity
+- CSS Framework: `bootstrap` was chosen due to its adaptation as well as familiarity
+- Test Framework: `MiniTest` was chosen as it is the `rails` default, may switch to `rspec` as stretch goal
 - Authentication: `devise` was chosen due to its extensibility for later use
 - Twitter API: `twitter` was chosen as it is defacto standard to access Twitter API
 - Autolink: `twitter-text` was chosen as it is maintained by Twitter community 
@@ -44,6 +45,10 @@ git clone https://github.com/dharamgollapudi/twitter_on_rails
 cd twitter_on_rails
 bundle install
 ```
+
+Running the Server:
+-------------------
+Complete Local Setup (above)
 
 Prepare the DB
 ```
@@ -67,6 +72,22 @@ If you are running the server using `foreman` it is advised to set them in `.env
 Or you could run the server as follows:
 
 `TWITTER_CONSUMER_KEY={your_consumer_key} TWITTER_CONSUMER_SECRET={your_consumer_secret} bundle exec rails s`
+
+Testing:
+--------
+Complete Local Setup (above)
+
+Prepare the DB
+```
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake db:test:prepare
+```
+
+Run the tests
+```
+bundle exec rake test
+```
 
 Links:
 ------
