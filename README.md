@@ -22,10 +22,19 @@ Stretch Goals:
 Submission Guidelines:
 ----------------------
 Create a Readme file within the repository that contains the following:
-- [ ] Brief walk-through of app design / choices made
+- [x] Brief walk-through of app design / choices made
 - [x] Local environment setup instructions
 - [ ] Test suite setup/execution instructions (if applicable)
 - [ ] Email links of the public GitHub repo and live Heroku application to dev-challenge@stackcommerce.com
+
+Design Choices:
+---------------
+- App Framework: `rails` was chosen as it is quick to setup up an MVP as well as familiarity
+- CSS Framework: 'bootstrap' was chosen due to its adaptation as well as familiarity
+- Authentication: `devise` was chosen due to its extensibility for later use
+- Twitter API: `twitter` was chosen as it is defacto standard to access Twitter API
+- Autolink: `twitter-text` was chosen as it is maintained by Twitter community 
+- Caching: `Rails.cache` was chosen as it is built into the framework and has a pluggable backend if need be
 
 Local Setup:
 ------------
