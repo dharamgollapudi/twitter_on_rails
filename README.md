@@ -23,9 +23,41 @@ Submission Guidelines:
 ----------------------
 Create a Readme file within the repository that contains the following:
 - [ ] Brief walk-through of app design / choices made
-- [ ] Local environment setup instructions
+- [x] Local environment setup instructions
 - [ ] Test suite setup/execution instructions (if applicable)
 - [ ] Email links of the public GitHub repo and live Heroku application to dev-challenge@stackcommerce.com
+
+Local Setup:
+------------
+Clone the repo and install dependencies:
+```
+git clone https://github.com/dharamgollapudi/twitter_on_rails
+cd twitter_on_rails
+bundle install
+```
+
+Prepare the DB
+```
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake db:seed
+```
+
+Run the server by one of the following
+```
+bundle exec rails s
+foreman start
+```
+
+Note: Before running the server, the following environment variables need to be setup in order to communicate with twitter.
+- `TWITTER_CONSUMER_KEY` and 
+- `TWITTER_CONSUMER_SECRET`
+
+If you are running the server using `foreman` it is advised to set them in `.env` file.
+
+Or you could run the server as follows:
+
+`TWITTER_CONSUMER_KEY={your_consumer_key} TWITTER_CONSUMER_SECRET={your_consumer_secret} bundle exec rails s`
 
 Links:
 ------
