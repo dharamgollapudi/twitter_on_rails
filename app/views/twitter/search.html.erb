@@ -27,7 +27,7 @@
           <tbody>
           <% @tweets.each do |tweet| %>
             <tr>
-              <td><%= auto_link(tweet.text).html_safe %></td>
+              <td><%= auto_link(tweet.text, username_url_base: "http://localhost:5000/twitter/").html_safe %></td>
               <td><%= tweet.created_at %></td>
             </tr>
           <% end %>
