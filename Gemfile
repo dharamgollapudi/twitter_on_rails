@@ -45,6 +45,7 @@ gem 'twitter-text', '~> 1.14', '>= 1.14.5'
 gem 'dalli', '~> 2.7', '>= 2.7.6'
 gem 'connection_pool', '~> 2.2', '>= 2.2.1'
 gem 'omniauth-twitter', '~> 1.4'
+gem 'jquery-datatables-rails', '~> 3.4.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

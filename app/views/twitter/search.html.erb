@@ -16,7 +16,7 @@
   <div class="row" style="margin-top:20px;">
     <div class="col-lg-12">
       <% if @tweets.present? %>
-        <table class="table table-bordered table-striped table-hover">
+        <table class="table table-bordered table-striped table-hover" id="tweets">
           <thead>
           <tr>
             <th>Tweet</th>
@@ -38,4 +38,10 @@
       <% end %>
     </div>
   </div>
+<% end %>
+
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    $('#tweets').DataTable();
+  } );
 <% end %>
