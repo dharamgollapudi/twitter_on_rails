@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'twitter/following', to: 'twitter#following'
   get 'twitter/followers', to: 'twitter#followers'
   get 'twitter/favorites', to: 'twitter#favorites'
+  get 'twitter/(:query)', to: 'twitter#search'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
