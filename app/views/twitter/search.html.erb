@@ -1,7 +1,7 @@
 <div class="row" style="margin-top:20px;">
   <div class="col-lg-6">&nbsp;</div>
   <div class="col-lg-6">
-    <%= form_tag '/twitter/', method: :get do %>
+    <%= form_tag twitter_index_path, method: :get do %>
       <div class="input-group">
         <%= text_field_tag :query, params[:query], placeholder: "Search Tweets by handle", class: 'form-control' %>
         <span class="input-group-btn">
