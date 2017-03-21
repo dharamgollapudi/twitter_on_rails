@@ -1,0 +1,35 @@
+<div class="row" style="margin-top:20px;">
+  <div class="col-lg-12">
+    <% if @followers.present? %>
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Statuses</th>
+          <th>Followers</th>
+          <th>Friends</th>
+          <th>Favorites</th>
+          <th>CreatedAt</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @followers.each do |user| %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.location %></td>
+            <td><%= user.statuses_count %></td>
+            <td><%= user.followers_count %></td>
+            <td><%= user.friends_count %></td>
+            <td><%= user.favorites_count %></td>
+            <td><%= user.created_at %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <p>There are no followers.</p>
+    <% end %>
+  </div>
+</div>

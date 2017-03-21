@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319232728) do
+ActiveRecord::Schema.define(version: 20170320200537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,13 @@ ActiveRecord::Schema.define(version: 20170319232728) do
     t.string   "encrypted_password", default: "", null: false
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "token"
+    t.string   "secret"
+    t.text     "oauth_data"
+    t.index ["email"], name: "index_users_on_email", using: :btree
+    t.index ["provider", "uid"], name: "index_users_on_provider_and_uid", using: :btree
   end
 
 end

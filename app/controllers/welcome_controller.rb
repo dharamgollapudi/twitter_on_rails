@@ -1,3 +1,4 @@
+# :no-doc:
 class WelcomeController < ApplicationController
   def index
   end

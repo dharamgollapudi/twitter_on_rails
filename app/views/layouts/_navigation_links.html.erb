@@ -1,5 +1,12 @@
 <% if user_signed_in? %>
   <ul class="nav navbar-nav">
+    <% if current_user.token.present? %>
+      <li><%= link_to('Feed', twitter_home_timeline_path) %></li>
+      <li><%= link_to('Following', twitter_following_path) %></li>
+      <li><%= link_to('Followers', twitter_followers_path) %></li>
+      <li><%= link_to('Favorites', twitter_favorites_path) %></li>
+    <% end %>
+
     <li><%= link_to('Search', twitter_search_path) %></li>
   </ul>
 

@@ -11,6 +11,7 @@
     </div>
     <div class="form-group">
       <%= f.submit 'Sign in', :class => 'btn btn-primary' %>
+      <%= link_to "Sign In With Twitter", user_twitter_omniauth_authorize_path, class: 'btn btn-default' %>
     </div>  
   <% end %>
 </div>

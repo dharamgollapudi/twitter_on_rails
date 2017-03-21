@@ -12,6 +12,7 @@
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
-    <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary' %>
+    <%= f.submit 'Sign up', class: 'btn btn-primary' %>
+    <%= link_to 'Sign up With Twitter', user_twitter_omniauth_authorize_path, class: 'btn btn-default' %>    
   <% end %>
 </div>
