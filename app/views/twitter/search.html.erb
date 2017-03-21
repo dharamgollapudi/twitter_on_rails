@@ -19,6 +19,7 @@
         <table class="table table-bordered table-striped table-hover" id="tweets">
           <thead>
           <tr>
+            <th>ID</th>
             <th>Tweet</th>
             <th>CreatedAt</th>
           </tr>
@@ -27,21 +28,19 @@
           <tbody>
           <% @tweets.each do |tweet| %>
             <tr>
+              <td><%= tweet.id %></td>
               <td><%= auto_link(tweet.text, username_url_base: "http://localhost:5000/twitter/").html_safe %></td>
               <td><%= tweet.created_at %></td>
             </tr>
           <% end %>
           </tbody>
         </table>
+
+        <%= link_to 'Next', twitter_index_path(query: params[:query], max_id: @tweets.last.id), class: 'btn btn-primary' %>
+
       <% else %>
         <p>There are no tweets for the search criteria.</p>
       <% end %>
     </div>
   </div>
-<% end %>
-
-<%= javascript_tag do %>
-  $(document).ready(function() {
-    $('#tweets').DataTable();
-  } );
 <% end %>

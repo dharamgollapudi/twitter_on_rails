@@ -3,7 +3,10 @@ class TwitterController < ApplicationController
   def search
     if params[:query].present?
       handle = params[:query]
-      @tweets = TwitterClient.new.user_timeline(handle)
+      options = {}
+      options[:count] = 25
+      options[:max_id] = params[:max_id] if params[:max_id].present?
+      @tweets = TwitterClient.new.user_timeline(handle, options)
     end
   end
 

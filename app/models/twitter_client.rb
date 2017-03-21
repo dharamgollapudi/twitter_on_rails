@@ -22,10 +22,11 @@ class TwitterClient
     end
   end
 
-  def user_timeline(handle_or_uid)
-    Rails.cache.fetch("user_timeline_for_#{handle_or_uid}", expires_in: 5.minutes) do
-      native_client.user_timeline(handle_or_uid)
-    end
+  def user_timeline(handle_or_uid, options)
+    # Rails.cache.fetch("user_timeline_for_#{handle_or_uid}", expires_in: 5.minutes) do
+    #   console
+      native_client.user_timeline(handle_or_uid, options)
+    # end
   end
 
   def following(uid)
