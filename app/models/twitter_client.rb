@@ -23,10 +23,11 @@ class TwitterClient
   end
 
   def user_timeline(handle_or_uid, options)
-    # Rails.cache.fetch("user_timeline_for_#{handle_or_uid}", expires_in: 5.minutes) do
-    #   console
+    max_id = options[:max_id] || ''
+    key = "user_timeline_for_#{handle_or_uid}#{max_id}"
+    Rails.cache.fetch(key, expires_in: 5.minutes) do
       native_client.user_timeline(handle_or_uid, options)
-    # end
+    end
   end
 
   def following(uid)
